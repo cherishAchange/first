@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>混</title>
+	<meta name="keywords" content="关键字列表" />
+	<meta name="description" content="网页描述" />
+	<link rel="stylesheet" type="text/css" href="" />
+	<style type="text/css">
+		body{
+			margin:0px;
+			background:url(../images/bac.jpg);
+		}
+		#father{
+			list-style: none;
+			padding:0px;
+			margin:0px;
+		}
+		#father>li{
+			height:100%;
+			width:100%;
+		}
+		#son2>iframe{
+			width:100%;
+			height:100%;
+		}
+		#head1{
+			height:100px;
+			padding-top:10px;
+			position:relative;
+		}
+		.text{
+			position:absolute;
+			margin:0px;	
+			left:300px;
+			top:20px;
+			font-size: 34px;
+			width:34px;
+			overflow: hidden;
+		}
+		.text>span{
+			display:block;
+			width:340px;
+			background: #fff;
+		}
+		#sdy{
+			position:relative;
+			width:90px;
+			height:90px;
+			margin-left:20px;
+			animation-name:trans;
+			animation-duration:15s;
+			animation-iteration-count:infinite;
+			animation-timing-function:linear;
+		}
+		#sun{
+			position:absolute;
+			left:26px;
+			top:26px;
+			width:38px;
+			height:38px;
+			color:yellow;
+			border-radius:50%;
+			background:red;
+		}
+		#dyue{
+			position:absolute;
+			left:60px;
+			top:0px;
+			width:30px;
+			height:30px;
+			animation-name:trans;
+			animation-duration:8s;
+			animation-iteration-count:infinite;
+			animation-timing-function:linear;
+		}
+		#eath{
+			position:absolute;
+			top:7px;
+			left:7px;
+			width:16px;
+			height:16px;
+			border-radius:50%;
+			background:blue;
+		}
+		#moon{
+			position:absolute;
+			top:0px;
+			left:22px;
+			width:8px;
+			height:8px;
+			border-radius:50%;
+			background:yellow;
+		}
+		@keyframes trans{
+			0%{
+				transform:rotateZ(0deg);
+			}
+			10%{
+				transform:rotateZ(34deg);
+			}
+			20%{
+				transform:rotateZ(68deg);
+			}
+			30%{
+				transform:rotateZ(102deg);
+			}
+			40%{
+				transform:rotateZ(136deg);
+			}
+			50%{
+				transform:rotateZ(170deg);
+			}
+			60%{
+				transform:rotateZ(204deg);
+			}
+			70%{
+				transform:rotateZ(238deg);
+			}
+			80%{
+				transform:rotateZ(272deg);
+			}
+			90%{
+				transform:rotateZ(308deg);
+			}
+			100%{
+				transform:rotateZ(352deg);
+			}
+		}
+		#stage{
+			perspective:800px;
+			position:relative;
+			height:270px;
+		}
+		#content{
+			position:relative;
+			top:69px;
+			width:540px;
+			height:80px;
+			margin:0px auto;
+			transform-style:preserve-3d;
+		}
+		#content>img{
+			position:absolute;
+			width:128px;
+			height:80px;
+			left:206px;
+		}
+		img:nth-child(1){
+			transform:rotateY(0deg) translateZ(195px);
+		}
+		img:nth-child(2){
+			transform:rotateY(40deg) translateZ(195px);
+		}
+		img:nth-child(3){
+			transform:rotateY(80deg) translateZ(195px);
+		}
+		img:nth-child(4){
+			transform:rotateY(120deg) translateZ(195px);
+		}
+		img:nth-child(5){
+			transform:rotateY(160deg) translateZ(195px);
+		}
+		img:nth-child(6){
+			transform:rotateY(200deg) translateZ(195px);
+		}
+		img:nth-child(7){
+			transform:rotateY(240deg) translateZ(195px);
+		}
+		img:nth-child(8){
+			transform:rotateY(280deg) translateZ(195px);
+		}
+		img:nth-child(9){
+			transform:rotateY(320deg) translateZ(195px);
+		}
+		.left{
+			position:relative;
+		}
+		#haha{
+			position:absolute;
+			left:30px;
+			width:280px;
+			height:250px;
+			overflow:hidden;
+			border:10px solid #000;
+			border-radius:10px;
+			opacity:0.8;
+		}
+		#r{
+			position:absolute;
+			border:1px solid #cccccc;
+		}
+		#ny{
+			width:100%;
+			height:27px;
+			border:1px solid #000;
+		}
+		#Left,#mid,#Right{
+			display:block;
+			height:100%;
+			float:left;
+			line-height:27px;
+			text-align:center;
+			border:1px solid #000;
+		}
+		#Left,#Right{
+			width:26px;
+			cursor:pointer;
+		}
+		#mid{
+			width:218px;
+			color:#fff;
+			text-align:center;
+			line-height:30px;
+			font-size:16px;
+		}
+		#week{
+			overflow:hidden;
+			width:100%;
+			border-bottom:2px solid #000;
+			list-style:none;
+			padding:0px;
+			margin:0px;
+		}
+		#week li{
+			float:left;
+			height:24px;
+			width:33px;
+			line-height:24px;
+			text-align:center;
+			color:#fff;
+			font-size:22px;
+			margin:3px;
+		}
+		#day{
+			list-style:none;
+			padding:0px;
+			margin:0px;
+			padding-left:3px;
+		}
+		#day li{
+			float:left;
+			height:25px;
+			width:33px;
+			line-height:25px;
+			text-align:center;
+			font-size:18px;
+			margin:2px;
+		}
+		#show{
+			
+		}
+		#parent{
+			position:absolute;
+			right:0px;
+			top:0px;
+			width:280px;
+			height:250px;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			function Text(){
+				this.text=document.getElementsByClassName('text')[0];
+			}
+			Text.prototype.qiao=function(){
+				var that=this;
+				var timer=null;
+				var width=34;
+				var no=0;
+				timer=setInterval(function(){
+					if(no%2==0){
+						that.text.style.borderRight='3px solid black';
+					}else{
+						that.text.style.borderRight='none';
+					}
+					if(no%10==0){
+						that.text.style.width=width+'px';
+						width+=35;
+					}
+					no++;
+					if(no>70){
+						clearInterval(timer);
+					}
+				},200);
+			}
+			var text=new Text();
+			text.qiao();
+			function Startload(){
+				this.father=document.getElementById('father');
+			}
+			Startload.prototype.muW=function(){
+				this.father.style.width=window.innerWidth+'px'; 
+				this.father.style.height=window.innerHeight+'px';
+			}
+			new Startload().muW();
+			function R(){
+				this.haha=document.getElementById('haha');
+			}
+			R.prototype.dayli=[];
+			R.prototype.yueday=function(year,month){	
+				var tianshu;
+				var newdate=new Date(year.toString()+'/'+month.toString());
+				var year=newdate.getFullYear();
+				var month=newdate.getMonth()+1;//0~11
+				if((year%4==0 && year%100!=0) || year%400==0){//闰年
+					if(month==2){
+						tianshu=29;
+					}else if(month>=8){
+						if(month%2==0){
+							tianshu=31;
+						}else{
+							tianshu=30;
+						}
+					}else if(month%2==0){
+						tianshu=30;
+					}else{
+						tianshu=31;
+					}
+				}else{//平年
+					if(month==2){
+						tianshu=28;
+					}else if(month>=8){
+						if(month%2==0){
+							tianshu=31;
+						}else{
+							tianshu=30;
+						}
+					}else if(month%2==0){
+						tianshu=30;
+					}else{
+						tianshu=31;
+					}
+				}
+				return tianshu;
+			}
+			R.prototype.createTag=function(){
+				for(var i=0;i<42;i++){
+					this.dayli[i]=document.createElement('li');
+				}
+			}
+			R.prototype.access=function(year,month){	
+				var day=document.getElementById('day');
+				var mid=document.getElementById('mid');
+				var weizhi;
+				var newdate=new Date(year.toString()+'/'+month.toString()+'/'+'1');
+				var date=new Date();
+				var nowday=date.getDate();//1~31
+				var nowmonth=date.getMonth()+1;
+				var nowyear=date.getFullYear();
+				var week=newdate.getDay();//0~6
+				var dateD=newdate.getDate();//1~31
+				weizhi=week;
+				mid.innerHTML='<strong>'+year+'年'+month+'月'+'</strong>';
+				for(var i=0;i<this.dayli.length;i++){
+					this.dayli[i].innerHTML='';//li元素只创建一次，所以每次要清除
+					this.dayli[i].style.cursor='';
+					if(i>=weizhi && i<this.yueday(year,month)+weizhi){
+						this.dayli[i].style.background='#000';
+						this.dayli[i].innerHTML=dateD;
+						this.dayli[i].style.border='1px solid #fff';
+						dateD++;
+						if(dateD==new Date().getDate()+1 && nowmonth==month && nowyear==year){
+							this.dayli[i].style.background='#fff';
+							this.dayli[i].style.color='#000';
+							this.dayli[i].style.border='1px solid #000';
+						}else{
+							this.dayli[i].style.color='#fff';
+						}
+					}else{
+						this.dayli[i].style.background='#000';
+						this.dayli[i].style.border='1px solid #fff';
+					}
+					day.appendChild(this.dayli[i]);
+				}
+			}
+			R.prototype.jh=function(){
+				var Left=document.getElementById('Left');
+				var Right=document.getElementById('Right');
+				var date=new Date();
+				var year=date.getFullYear();
+				var month=date.getMonth()+1;
+				var nowday=date.getDate();//1~31
+				this.access(year,month);
+				var that=this;
+				Right.onclick=function(){
+					month++;
+					if(month>12){
+						year++;
+						month=1;
+					}
+					that.access(year,month);
+					Left.onclick=function(){
+						month--;
+						if(month<1){
+							year--;
+							month=12;
+						}
+						that.access(year,month);
+					}
+				}
+			}
+			R.prototype.sport=function(element){
+				var that=this;
+				this.haha.addEventListener('mouseover',lr,false);
+				this.haha.addEventListener('mouseout',m,false);
+				function lr(event){
+					event=event || window.event;
+					that.haha.style.transform='rotateY('+(event.clientX-that.haha.offsetWidth/2)/10+'deg)';
+				}
+				function m(){
+					that.haha.style.transform='rotateY(0deg)';
+				}
+			}
+			var r=new R();
+			r.createTag();
+			r.jh();
+			r.sport();
+			//计算机中用的是弧度，360=2Math.PI；
+			//alert(Math.sin(6*Math.PI/180)*90)
+			function Clock(){
+				
+			}
+			Clock.prototype.time=function(){
+				var engle=6;
+				var x2=140;
+				var y2=50;
+				var my2=65;
+				var hy2=80;
+				var timer=null;
+				var tagline=document.getElementsByTagName('line');
+				var date=new Date();
+				var engle=date.getSeconds()*6;
+				var mengle=date.getMinutes()*6+(date.getSeconds()/60)*6;
+				var hengle;
+				if(date.getHours()>12){
+					hengle=(date.getHours()-12)*30+(date.getMinutes()/60)*30;
+				}else{
+					hengle=date.getHours()*30+(date.getMinutes()/60)*30;
+				}
+				timer=setInterval(function(){
+					tagline[0].setAttribute('x2',x2+Math.round(Math.sin(engle*Math.PI/180)*75));
+					tagline[0].setAttribute('y2',y2+(75-Math.round(Math.sin((90-engle)*Math.PI/180)*75)));
+					tagline[1].setAttribute('x2',x2+Math.round(Math.sin(mengle*Math.PI/180)*60));
+					tagline[1].setAttribute('y2',my2+(60-Math.round(Math.sin((90-mengle)*Math.PI/180)*60)));
+					tagline[2].setAttribute('x2',x2+Math.sin(hengle*Math.PI/180)*45);
+					tagline[2].setAttribute('y2',hy2+(45-Math.sin((90-hengle)*Math.PI/180)*45));
+					engle+=6;
+					mengle+=1/10;
+					hengle+=1/600;
+				},1000);
+			}
+			Clock.prototype.biao=function(){
+				var E=30;
+				var g=document.getElementsByTagName('g')[0];
+				for(var i=1;i<13;i++){
+					var cx=140+Math.round(Math.sin(E*Math.PI/180)*90);
+					var cy=50+(75-Math.round(Math.sin((90-E)*Math.PI/180)*90));
+					var midcir=this.createTag('circle',{'cx':cx,'cy':cy,'r':8,'fill':'black','stroke':'white','stroke-width':'1','opacity':0.6})	;		
+					var midcirtext=this.createTag('text',{'x':cx,'y':cy+3,'fill':'white','font-size':'6','text-anchor':'middle'});
+					midcirtext.innerHTML=i;
+					E+=30;
+					g.appendChild(midcir);
+					g.appendChild(midcirtext);
+				}
+			}
+			Clock.prototype.createTag=function(tag,attr){
+				var svgNS="http://www.w3.org/2000/svg";
+				var otag=document.createElementNS(svgNS,tag);
+				for(var i in attr){
+					otag.setAttribute(i,attr[i]);
+				}
+				return otag;
+			}
+			var clock=new Clock();
+			clock.time();
+			clock.biao();
+			//图片放大镜
+			function F(){
+				this.content=document.getElementById('content');
+				this.deg=0;
+			};
+			F.prototype.stop=function(){
+				var that=this;
+				var haha=document.getElementById('haha');
+				var Img=document.getElementsByClassName('stop');
+				for(var i=0;i<Img.length;i++){
+					Img[i].addEventListener('mouseover',fangda,false);
+					Img[i].addEventListener('mouseout',jixu,false);
+				}
+				function fangda(){
+					clearInterval(that.content.timer);
+					
+				}
+				function jixu(){
+					that.trans();
+				}
+			}
+			F.prototype.trans=function(){
+				var that=this;
+				this.content.timer=setInterval(function(){
+					this.content.style.transform='rotateY('+that.deg+'deg)';
+					that.deg++;
+				},70);
+			}
+			var f=new F();
+			f.trans();
+			f.stop();
+	}
+	</script>
+</head>
+<body>
+<ul id='father'>
+	<li id='son1'>
+		<header id='head1'>
+			<div id='sdy'> 
+				<div id='sun'></div>
+				<div id='dyue'>
+					<div id='eath'></div>
+					<div id='moon'></div>
+				</div>
+			</div>
+			<h1 class='text'><span>没有排版也叫网页</span></h1>
+		</header>
+		<header id='stage'>
+			<div id='haha'>
+				<div id='r'>
+					<div id='ny'>
+						<span id='Left'><strong><</strong></span>
+						<span id='mid'></span>
+						<span id='Right'><strong>></strong></span>
+					</div>
+					<ul id='week'>
+						<li><strong>日</strong></li>
+						<li><strong>一</strong></li>
+						<li><strong>二</strong></li>
+						<li><strong>三</strong></li>
+						<li><strong>四</strong></li>
+						<li><strong>五</strong></li>
+						<li><strong>六</strong></li>
+					</ul>
+					<ul id='day'></ul>
+				</div>
+			</div>
+			<div id='content'>
+				<img src='../images/0.jpg' class='stop' />
+				<img src='../images/1.jpg' class='stop' />
+				<img src='../images/2.jpg' class='stop' />
+				<img src='../images/3.jpg' class='stop' />
+				<img src='../images/4.jpg' class='stop' />
+				<img src='../images/5.jpg' class='stop' />
+				<img src='../images/6.jpg' class='stop' />
+				<img src='../images/7.jpg' class='stop' />
+				<img src='../images/8.jpg' class='stop' />
+			</div>
+			<div id='show'>
+				<!--放待选择要展示的照片-->
+			</div>
+			<div id='parent'>
+				<svg xmlns="http://www.w3.org/2000/svg" width='100%' height='100%'>
+					<g>
+						<circle cx='140' cy='125' r='90' stroke-width='15' stroke='white' fill='black' opacity=0.6></circle>
+						<line x1='140' y1='125' x2='140' y2='50' stroke='white' stroke-width='1'></line>
+						<line x1='140' y1='125' x2='140' y2='65' stroke='white' stroke-width='2'></line>
+						<line x1='140' y1='125' x2='140' y2='80' stroke='white' stroke-width='4'></line>
+						<circle cx='140' cy='125' r='3' stroke-width='1' stroke='blue' fill='white'></circle>
+					</g>
+				</svg>
+			</div>
+		</header>
+	</li>
+	<li id='son2'>
+		<iframe src="../photo/photo.html"></iframe>
+	</li>
+</ul>
+</body>
+</html>
