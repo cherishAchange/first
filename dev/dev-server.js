@@ -12,7 +12,8 @@ http.createServer(function (request, response) {
     var dirname = __dirname;
     var bootdir = dirname.slice(0,dirname.length-3);
     if(request.url === '/'){
-        fs.readFile(bootdir+'/first/hun.html',function(err,data){
+        console.log(bootdir);
+        fs.readFile(bootdir+'/hun.html',function(err,data){
             if(err){
                 response.writeHead(404,{"ContentType":"text/html"});
             }else{
