@@ -1,0 +1,26 @@
+{
+  "name": "hun",
+  "description": "小白一枚，初次认识git，欢迎交流。",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dev/dev-server.js"
+  },
+  "dependencies": {
+    "lodash": "^4.13.1",
+    "react": "^0.14.8",
+    "react-dom": "^0.14.8",
+    "react-router": "^2.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cherishAchange/first.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cherishAchange/first/issues"
+  },
+  "homepage": "https://github.com/cherishAchange/first#readme"
+}
