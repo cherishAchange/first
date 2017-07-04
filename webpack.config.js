@@ -10,24 +10,24 @@ module.exports = {
     },
     output: {
         "path": path.join(__dirname, "dist", 'js'),
-        "filename": "my-first-project.bundle.js"
+        "filename": "bundle.js"
     },
     module: {
         rules: [
             {
                 test: /\.js$/,
                 loaders: ["babel-loader"],
-                exclude: [path.join(__dirname, "node_modules", 'ts')]
+                exclude: [path.join(__dirname, "node_modules", 'js')]
             },
             {
                 test: /\.scss$/,
-                loaders: ["scss-loader"],
-                exclude: [path.join(__dirname, "node_modules", 'ts')]
+                loaders: ["sass-loader", "scss-loader", "style-loader","less-loader"],
+                exclude: [path.join(__dirname, "node_modules", 'scss')]
             },
             {
                 test: /\.css$/,
-                loaders: ["css-loader"],
-                exclude: [path.join(__dirname, "node_modules", 'ts')]
+                loaders: ["style-loader", "css-loader"],
+                exclude: [path.join(__dirname, "node_modules", 'css')]
             }
         ]
     },

@@ -1,0 +1,39 @@
+.haha{
+    width: 210px;
+    height: 200px;
+}
+.ny{
+    height: 18px;
+    width: 100%;
+}
+.week{
+    height: 20px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    list-style: none;
+}
+.week li{
+    float: left;
+    height: 100%;
+    width: 30px;
+    text-align: left;
+    line-height: 20px;
+    border-bottom: 1px solid #cccccc;
+}
+.day{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    list-style: none;
+}
+.day li{
+    float: left;
+    height: 20px;
+    width: 30px;
+    text-align: center;
+    line-height: 20px;
+    border: 1px solid #cccccc;
+}
