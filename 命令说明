@@ -1,0 +1,11 @@
+#npm
+##npm安装命令
+//npm install bebal --save,此命令npm安装到dependencies
+//npm install babel-plugin-transform-runtime --save-dev，此命令npm安装到devDependencies
+
+#git
+##创建新分支并推到远程仓库
+//step1：git branch -l newbranch //本地创建一个新分支
+//step2：git checkout newbranch //切换到新创建的分支
+//step3：git push --set-upstream origin newbranch //将新建分支推送到远程仓库
+//step4: git branch -a //查看一下
