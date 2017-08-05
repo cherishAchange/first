@@ -20,3 +20,5 @@
 查看进程: ps -ef|grep nginx
 杀死进程: kill -TERM 进程号 || kill -INT 进程号
 启动: nginx安装目录地址 -c nginx配置文件地址
+
+##实验git   --global -email -name
