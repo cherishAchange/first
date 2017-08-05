@@ -3,13 +3,13 @@
  */
 import React, {Component} from 'react';
 import _ from 'lodash';
-import './index.css';
+import './index.scss';
 
 class Date extends Component {
     constructor(props){
         super(props);
         this.state = {
-            dayOne: new Date().getDay()
+            dayOne: ""
         }
     }
     componentDidMount(){

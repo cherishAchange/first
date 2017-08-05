@@ -4,7 +4,7 @@
 //workspace
 import React, {Component} from 'react';
 import {Link,Router} from 'react-router';
-require('./index.css');
+require('./index.scss');
 
 class Workspace extends Component {
     constructor(props){
@@ -12,18 +12,18 @@ class Workspace extends Component {
     }
     render(){
         return (
-            <div>
-                <div id="Header">
+            <div className="my-workspace">
+                <div className="Header">
                     页头
                 </div>
-                <div id="body">
-                    <div id="salid">
+                <div className="body">
+                    <div className="salid">
                         <ul>
                             <li><Link to="/you-date">我是日历导航</Link></li>
                             <li><Link to="/you-photo">我是照片圈导航</Link></li>
                         </ul>
                     </div>
-                    <div id="main">
+                    <div className="main">
                         {this.props.children}
                     </div>
                 </div>

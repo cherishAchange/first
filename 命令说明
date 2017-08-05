@@ -9,3 +9,4 @@
 //step2：git checkout newbranch //切换到新创建的分支
 //step3：git push --set-upstream origin newbranch //将新建分支推送到远程仓库
 //step4: git branch -a //查看一下
+"node-sass": "",   //sass用Ruby实现,node-sass捆绑node和sass，使sass可以运行在node上
