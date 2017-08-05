@@ -10,3 +10,13 @@
 //step3：git push --set-upstream origin newbranch //将新建分支推送到远程仓库
 //step4: git branch -a //查看一下
 "node-sass": "",   //sass用Ruby实现,node-sass捆绑node和sass，使sass可以运行在node上
+
+#mac操作命令
+修改文件名: mv 旧文件名 新文件名
+删除文件: rm 文件名
+查看当前所在路径: pwd
+
+#nginx
+查看进程: ps -ef|grep nginx
+杀死进程: kill -TERM 进程号 || kill -INT 进程号
+启动: nginx安装目录地址 -c nginx配置文件地址
