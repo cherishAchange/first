@@ -23,3 +23,6 @@
 
 ##实验git   --global -email -name
 hahaha
+
+#启动mongodb：sudo mongod
+#启动mongoshell：打开目录/usr/local/mongodb/bin    命令./mongo
