@@ -6,6 +6,7 @@ import React from 'react';
 import Workspace from './index';
 import Date from './components/date/index.js';
 import Photo from './components/photo/index.js';
+import Login from './components/login/index.js';
 
 const Routes = [
     {
@@ -19,6 +20,10 @@ const Routes = [
             {
                 path: "you-photo",
                 component: Photo
+            },
+            {
+                path: "you-login-page",
+                component: Login
             }
         ]
     }

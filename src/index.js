@@ -21,6 +21,7 @@ class Workspace extends Component {
                         <ul>
                             <li><Link to="/you-date">我是日历导航</Link></li>
                             <li><Link to="/you-photo">我是照片圈导航</Link></li>
+                            <li><Link to="/you-login-page">我是登录页面</Link></li>
                         </ul>
                     </div>
                     <div className="main">

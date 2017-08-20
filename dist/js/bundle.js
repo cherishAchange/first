@@ -26486,12 +26486,12 @@ var _index5 = __webpack_require__(236);
 
 var _index6 = _interopRequireDefault(_index5);
 
+var _index7 = __webpack_require__(237);
+
+var _index8 = _interopRequireDefault(_index7);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/**
- * Created by taibowen on 2017/7/4.
- */
-//在这里引入workspace和所有的组件
 var Routes = [{
     path: "/",
     component: _index2.default,
@@ -26501,9 +26501,14 @@ var Routes = [{
     }, {
         path: "you-photo",
         component: _index6.default
+    }, {
+        path: "you-login-page",
+        component: _index8.default
     }]
-}];
-
+}]; /**
+     * Created by taibowen on 2017/7/4.
+     */
+//在这里引入workspace和所有的组件
 exports.default = Routes;
 
 /***/ }),
@@ -26585,6 +26590,15 @@ var Workspace = function (_Component) {
                                     { to: '/you-photo' },
                                     '\u6211\u662F\u7167\u7247\u5708\u5BFC\u822A'
                                 )
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                null,
+                                _react2.default.createElement(
+                                    _reactRouter.Link,
+                                    { to: '/you-login-page' },
+                                    '\u6211\u662F\u767B\u5F55\u9875\u9762'
+                                )
                             )
                         )
                     ),
@@ -26643,7 +26657,7 @@ exports = module.exports = __webpack_require__(117)(undefined);
 
 
 // module
-exports.push([module.i, "* {\n  margin: 0px;\n  padding: 0px; }\n\n.my-workspace .Header {\n  width: 100%;\n  height: 60px;\n  background-color: #cccccc; }\n\n.my-workspace .body {\n  overflow: hidden;\n  width: 100%; }\n\n.my-workspace .salid {\n  float: left;\n  width: 200px;\n  background-color: lightslategrey;\n  text-align: center; }\n  .my-workspace .salid a {\n    text-decoration: none; }\n    .my-workspace .salid a font {\n      size: 16px;\n      weight: 200; }\n\n.my-workspace .main {\n  float: left; }\n", ""]);
+exports.push([module.i, "* {\n  margin: 0px;\n  padding: 0px; }\n\n.my-workspace .Header {\n  width: 100%;\n  height: 60px;\n  background-color: #cccccc; }\n\n.my-workspace .body {\n  overflow: hidden;\n  width: 100%; }\n\n.my-workspace .salid {\n  float: left;\n  width: 200px;\n  background-color: lightslategrey;\n  text-align: center; }\n  .my-workspace .salid a {\n    text-decoration: none; }\n    .my-workspace .salid a font {\n      size: 12px; }\n\n.my-workspace .main {\n  float: left; }\n", ""]);
 
 // exports
 
@@ -36557,6 +36571,143 @@ var Photo = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = Photo;
+
+/***/ }),
+/* 237 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _index = __webpack_require__(238);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Login = function (_Component) {
+    _inherits(Login, _Component);
+
+    function Login(props) {
+        _classCallCheck(this, Login);
+
+        var _this = _possibleConstructorReturn(this, (Login.__proto__ || Object.getPrototypeOf(Login)).call(this, props));
+
+        _this.input = {
+            input1: null,
+            input2: null
+        };
+        _this.submit = _this.submit.bind(_this); //绑定this
+        return _this;
+    }
+
+    _createClass(Login, [{
+        key: 'submit',
+        value: function submit(e) {
+            if (this.input.input1.value && this.input.input2.value) {
+                var obj = {
+                    "name": this.input.input1.value,
+                    "password": this.input.input2.value
+                };
+                var data = (0, _index.ajax)("/api/login", obj, 'POST');
+                console.log(data);
+            }
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this2 = this;
+
+            return _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(
+                    'h1',
+                    null,
+                    '\u6211\u662F\u767B\u5F55\u9875\u9762'
+                ),
+                _react2.default.createElement(
+                    'div',
+                    null,
+                    _react2.default.createElement(
+                        'form',
+                        null,
+                        _react2.default.createElement('input', { type: 'text', ref: function ref(target) {
+                                _this2.input.input1 = target;
+                            } }),
+                        _react2.default.createElement('input', { type: 'text', ref: function ref(target) {
+                                _this2.input.input2 = target;
+                            } }),
+                        _react2.default.createElement(
+                            'button',
+                            { type: 'button', onClick: this.submit },
+                            '\u767B\u5F55'
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Login;
+}(_react.Component);
+
+exports.default = Login;
+
+/***/ }),
+/* 238 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.ajax = undefined;
+
+var _ajax = __webpack_require__(239);
+
+exports.ajax = _ajax.ajax;
+
+/***/ }),
+/* 239 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+       value: true
+});
+exports.ajax = ajax;
+function ajax(url, params, method, cb) {
+       var myHeaders = new Headers();
+       myHeaders.append('Content-Type', 'application/json');
+       var request = new Request(url, {
+              method: method,
+              mode: 'cors',
+              body: JSON.stringify(params),
+              headers: myHeaders
+       });
+       fetch(request).then(function (response) {
+              return response.json();
+       }).then(function (result) {});
+};
 
 /***/ })
 /******/ ]);
