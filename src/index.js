@@ -14,7 +14,7 @@ class Workspace extends Component {
         return (
             <div className="my-workspace">
                 <div className="Header">
-                    页头
+                    <h4>页头,下面的li根据authorMenu动态生成，以达到控制页面的权限</h4>
                 </div>
                 <div className="body">
                     <div className="salid">

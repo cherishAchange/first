@@ -24,5 +24,9 @@
 ##实验git   --global -email -name
 hahaha
 
-#启动mongodb：sudo mongod
+#启动mongodb：sudo /usr/local/mongodb/bin/mongod
 #启动mongoshell：打开目录/usr/local/mongodb/bin    命令./mongo
+#查看数据库    show dbs
+#切到一个数据库下  use dbname
+#查看数据库下的表   show tables
+#查看数据表数据   db.tableName.find()

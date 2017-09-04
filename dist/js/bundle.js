@@ -26562,7 +26562,11 @@ var Workspace = function (_Component) {
                 _react2.default.createElement(
                     'div',
                     { className: 'Header' },
-                    '\u9875\u5934'
+                    _react2.default.createElement(
+                        'h4',
+                        null,
+                        '\u9875\u5934,\u4E0B\u9762\u7684li\u6839\u636EauthorMenu\u52A8\u6001\u751F\u6210\uFF0C\u4EE5\u8FBE\u5230\u63A7\u5236\u9875\u9762\u7684\u6743\u9650'
+                    )
                 ),
                 _react2.default.createElement(
                     'div',
