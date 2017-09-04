@@ -1,0 +1,32 @@
+#npm
+##npm安装命令
+//npm install bebal --save,此命令npm安装到dependencies
+//npm install babel-plugin-transform-runtime --save-dev，此命令npm安装到devDependencies
+
+#git
+##创建新分支并推到远程仓库
+//step1：git branch -l newbranch //本地创建一个新分支
+//step2：git checkout newbranch //切换到新创建的分支
+//step3：git push --set-upstream origin newbranch //将新建分支推送到远程仓库
+//step4: git branch -a //查看一下
+"node-sass": "",   //sass用Ruby实现,node-sass捆绑node和sass，使sass可以运行在node上
+
+#mac操作命令
+修改文件名: mv 旧文件名 新文件名
+删除文件: rm 文件名
+查看当前所在路径: pwd
+
+#nginx
+查看进程: ps -ef|grep nginx
+杀死进程: kill -TERM 进程号 || kill -INT 进程号
+启动: nginx安装目录地址 -c nginx配置文件地址
+
+##实验git   --global -email -name
+hahaha
+
+#启动mongodb：sudo /usr/local/mongodb/bin/mongod
+#启动mongoshell：打开目录/usr/local/mongodb/bin    命令./mongo
+#查看数据库    show dbs
+#切到一个数据库下  use dbname
+#查看数据库下的表   show tables
+#查看数据表数据   db.tableName.find()

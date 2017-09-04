@@ -260,6 +260,11 @@
 	</style>
 	<script type="text/javascript">
 		window.onload=function(){
+            var Try = document.getElementsByClassName('try')[0];
+            Try.addEventListener('click', function(){
+                console.log(333333);
+			},false);
+            Try.click();
 			function Text(){
 				this.text=document.getElementsByClassName('text')[0];
 			}
@@ -499,7 +504,7 @@
 			F.prototype.trans=function(){
 				var that=this;
 				this.content.timer=setInterval(function(){
-					this.content.style.transform='rotateY('+that.deg+'deg)';
+					this.content.style.transform='rotateY('+that.deg+'deg) rotateX('+that.deg+'deg)';
 					that.deg++;
 				},70);
 			}
@@ -511,6 +516,7 @@
 </head>
 <body>
 <ul id='father'>
+	<button class="try">实验</button>
 	<li id='son1'>
 		<header id='head1'>
 			<div id='sdy'> 
