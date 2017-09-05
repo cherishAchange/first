@@ -483,7 +483,10 @@
 			//图片放大镜
 			function F(){
 				this.content=document.getElementById('content');
+				this.leftButton = document.getElementById('to_left');
+				this.rightButton = document.getElementById('to_right');
 				this.deg=0;
+				this.clickEdg = 10;
 			};
 			F.prototype.stop=function(){
 				var that=this;
@@ -504,13 +507,22 @@
 			F.prototype.trans=function(){
 				var that=this;
 				this.content.timer=setInterval(function(){
-					this.content.style.transform='rotateY('+that.deg+'deg) rotateX('+that.deg+'deg)';
+					this.content.style.transform='rotateY('+that.deg+'deg)';
 					that.deg++;
 				},70);
 			}
+			F.prototype.addEvent=function(){
+				var that = this;
+				this.leftButton.addEventListener('click', function(){that.eventMethed(that.deg-=10)}, false);
+				this.rightButton.addEventListener('click', function(){that.eventMethed(that.deg+=10)}, false);
+			}
+			F.prototype.eventMethed=function(params){
+				this.content.style.transform='rotateY('+params+'deg)';
+			}
 			var f=new F();
-			f.trans();
+			//f.trans();
 			f.stop();
+			f.addEvent();
 	}
 	</script>
 </head>
@@ -548,6 +560,13 @@
 					<ul id='day'></ul>
 				</div>
 			</div>
+			<button id="to_left"><--</button>
+			<button>
+				 ^
+				/|\
+				 |
+				 |
+			</button>
 			<div id='content'>
 				<img src='http://p3.gexing.com/G1/M00/34/36/rBACE1JPeLfzN8pgAAnkXFzlWPQ037.jpg' class='stop' />
 				<img src='http://img4.imgtn.bdimg.com/it/u=4225738818,668222096&fm=214&gp=0.jpg' class='stop' />
@@ -559,6 +578,7 @@
 				<img src='http://img2.niutuku.com/desk/130220/52/52-niutuku.com-2089.jpg' class='stop' />
 				<img src='http://img6.3lian.com/c23/desk2/22/28/24.jpg' class='stop' />
 			</div>
+			<button id="to_right">--></button>
 			<div id='show'>
 				<!--放待选择要展示的照片-->
 			</div>
