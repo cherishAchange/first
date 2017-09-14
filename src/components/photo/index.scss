@@ -1,0 +1,39 @@
+.photo-show{
+    .single{
+        width: 150px;
+        height: 20px;
+        border: 1px solid #ccc;
+        .actually-single{
+            @keyframes myfirst{
+                from {border-left: 2px solid #555555;}
+                to {border-left: 2px solid #ffffff;}
+            }
+            display: inline-block;
+            height: 80%;
+            border-left: 1px solid #555555; 
+            -webkit-animation:myfirst infinite;
+            -webkit-animation-duration:1s;
+            margin: auto 1px;
+        }
+        .world{
+            display: inline-block;
+            margin: 0px;
+            font-size: 12px;
+            line-height: 20px;
+            color: #ccc;
+            vertical-align: top;
+        }
+        .actually-single1{
+            -webkit-animation-delay:0.2s;
+        }
+        .actually-single2{
+            -webkit-animation-delay:0.1s;
+        }
+        .actually-single3{
+            -webkit-animation-delay:0.3s;
+        }
+    }
+    .input{
+        outline: none;
+    }
+}
